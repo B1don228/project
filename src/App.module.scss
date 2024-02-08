@@ -1,0 +1,18 @@
+.desc.close {
+  display: none;
+}
+.desc.open {
+  display: block;
+}
+
+.menu.open {
+  color: blue;
+  & button {
+    background: red;
+  }
+}
+.menu.close {
+  & button {
+    background: blue;
+  }
+}

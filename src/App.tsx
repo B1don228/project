@@ -1,17 +1,21 @@
 import { useState } from "react";
-import "./App.css";
+import styles from "./App.module.scss";
 import StyledButton from "./components/Button";
-import classNames from "classnames";
+import classNames from "classnames/bind";
 
 function App() {
   const [open, setOpen] = useState<boolean>(false);
 
+  let cx = classNames.bind(styles);
+
   return (
-    <div>
-      <StyledButton onClick={() => setOpen((prev) => !prev)}>
+    <div className={cx("menu", { open: open, close: !open })}>
+      <button onClick={() => setOpen((prev) => !prev)}>
         {!open ? "Open" : "Close"}
-      </StyledButton>
-      <div className={classNames("desc", { open: open })}>Instruction</div>
+      </button>
+      <div className={cx("desc", { open: open, close: !open })}>
+        Instruction
+      </div>
     </div>
   );
 }
