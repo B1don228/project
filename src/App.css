@@ -1,0 +1,6 @@
+.desc {
+  display: none;
+}
+.desc.open {
+  display: block;
+}
