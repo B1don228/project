@@ -16,3 +16,10 @@
     background: blue;
   }
 }
+
+.star {
+  color: red;
+  &.active {
+    color: yellow;
+  }
+}

@@ -5,6 +5,7 @@ import classNames from "classnames/bind";
 
 function App() {
   const [open, setOpen] = useState<boolean>(false);
+  const [star, setStar] = useState<boolean>(false);
 
   let cx = classNames.bind(styles);
 
@@ -15,6 +16,14 @@ function App() {
       </button>
       <div className={cx("desc", { open: open, close: !open })}>
         Instruction
+      </div>
+      <div>
+        <div
+          className={cx("star", { active: star })}
+          onClick={() => setStar((prev) => !prev)}
+        >
+          Star
+        </div>
       </div>
     </div>
   );
