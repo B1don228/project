@@ -9,6 +9,7 @@ import {
 } from "@apollo/client";
 
 import { onError } from "@apollo/client/link/error";
+import GetUsers from "./GetUsers";
 
 const errorLink = onError(({ grapghqlErrors, networkError }: any) => {
   if (grapghqlErrors) {
@@ -31,7 +32,11 @@ const client = new ApolloClient({
 });
 
 const Graph = () => {
-  return <ApolloProvider client={client}></ApolloProvider>;
+  return (
+    <ApolloProvider client={client}>
+      <GetUsers />
+    </ApolloProvider>
+  );
 };
 
 export default Graph;

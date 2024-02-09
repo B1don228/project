@@ -2,6 +2,7 @@ import { useState } from "react";
 import styles from "./App.module.scss";
 import StyledButton from "./components/Button";
 import classNames from "classnames/bind";
+import Graph from "./components/Graph";
 
 function App() {
   const [open, setOpen] = useState<boolean>(false);
@@ -25,6 +26,7 @@ function App() {
           Star
         </div>
       </div>
+      <Graph />
     </div>
   );
 }
