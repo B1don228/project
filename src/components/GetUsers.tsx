@@ -25,7 +25,7 @@ const GetUsers = () => {
       {loading && <div>Loading</div>}
       {!loading && (
         <div>
-          Films:
+          All films:
           {films?.map((item: TypeFilms) => (
             <div key={item.title}>{item.title}</div>
           ))}
