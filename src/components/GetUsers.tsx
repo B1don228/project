@@ -23,10 +23,14 @@ const GetUsers = () => {
   return (
     <div>
       {loading && <div>Loading</div>}
-      {!loading &&
-        films?.map((item: TypeFilms) => (
-          <div key={item.title}>{item.title}</div>
-        ))}
+      {!loading && (
+        <div>
+          Films:
+          {films?.map((item: TypeFilms) => (
+            <div key={item.title}>{item.title}</div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
