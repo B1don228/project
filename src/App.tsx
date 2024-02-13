@@ -27,6 +27,7 @@ function App() {
         </div>
       </div>
       <Graph />
+      <div>Hello</div>
     </div>
   );
 }
